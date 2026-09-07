@@ -137,39 +137,13 @@ section {
 /* =====================================
    SECTIONS
 ===================================== */
-.site-section,
-.cv-section,
-.publication-section {
+.site-section {
   padding: 2rem 0;
   border-bottom: 1px solid #dee2e6;
 }
 
-.site-section:last-child,
-.cv-section:last-child,
-.publication-section:last-child {
+.site-section:last-child {
   border-bottom: none;
-}
-
-/* =====================================
-   SKILLS
-===================================== */
-.skill-section {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.skill-section:last-child {
-  border-bottom: none;
-}
-
-.skill-section h4 {
-  color: #0d6efd;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.skill-section p {
-  margin-bottom: 0;
 }
 
 /* =====================================
