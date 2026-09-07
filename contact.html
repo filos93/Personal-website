@@ -130,7 +130,7 @@
                     required>
             </div>
 
-            <div class="mb-4">
+            <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
 
                 <textarea
@@ -149,9 +149,9 @@
 
             </button>
 
-    </form>
+        </form>
 
-    <p id="success-message" class="mt-3"></p>
+        <p id="success-message" class="mt-3"></p>
 
     </main>
 
@@ -169,6 +169,7 @@
 
                     <a href="https://github.com/filos93"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="GitHub">
 
                         <i class="bi bi-github"></i>
@@ -177,6 +178,7 @@
 
                     <a href="https://www.linkedin.com/in/filippo-la-greca-1b95b3147/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="LinkedIn">
 
                         <i class="bi bi-linkedin"></i>
@@ -184,8 +186,9 @@
                     </a>
 
                     <a href="https://orcid.org/0000-0001-6476-7989"
-                    target="_blank"
-                    aria-label="ORCID">
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="ORCID">
                         <img
                             src="assets/images/ORCID_logo.svg.webp"
                             alt="ORCID"
@@ -204,45 +207,46 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
-emailjs.init("HIc3I7pMZ5XK8Sj_n");
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
+    emailjs.init("HIc3I7pMZ5XK8Sj_n");
 
-    event.preventDefault();
+    document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
 
-    emailjs.sendForm(
-      "service_mzdmz16",
-      "template_rucauft",
-      this
-    )
-    .then(() => {
+            event.preventDefault();
 
-      const msg = document.getElementById("success-message");
+            emailjs.sendForm(
+                "service_mzdmz16",
+                "template_rucauft",
+                this
+            )
+            .then(() => {
 
-      msg.innerHTML = "Message sent successfully!";
-      msg.classList.remove("text-danger");
-      msg.classList.add("text-success");
+                const msg = document.getElementById("success-message");
 
-      this.reset();
+                msg.innerHTML = "Message sent successfully!";
+                msg.classList.remove("text-danger");
+                msg.classList.add("text-success");
 
-    })
-    .catch((error) => {
+                this.reset();
 
-      const msg = document.getElementById("success-message");
+            })
+            .catch((error) => {
 
-      msg.innerHTML =
-        "Error sending message. Please try again.";
+                const msg = document.getElementById("success-message");
 
-      msg.classList.remove("text-success");
-      msg.classList.add("text-danger");
+                msg.innerHTML =
+                    "Error sending message. Please try again.";
 
-      console.error(error);
+                msg.classList.remove("text-success");
+                msg.classList.add("text-danger");
 
-    });
+                console.error(error);
 
-  });
+            });
+
+        });
 </script>
 
 <!-- Bootstrap JS -->
