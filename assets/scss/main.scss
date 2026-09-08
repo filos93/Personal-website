@@ -35,7 +35,17 @@ h2 {
 }
 
 h3 {
-  color: $secondary-color;
+  color: $primary-color;
+}
+
+
+h4 {
+  color: $primary-color;
+}
+
+
+h5 {
+  color: $primary-color;
 }
 
 p {
@@ -125,6 +135,7 @@ section {
 
 .about-title {
   font-size: 2.5rem;
+  font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -178,9 +189,10 @@ section {
   box-shadow: 0 8px 24px rgba(13, 110, 253, 0.15);
 }
 
-.card h5 {
+.card h2 {
   color: $primary-color;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
